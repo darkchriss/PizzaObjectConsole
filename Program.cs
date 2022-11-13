@@ -23,8 +23,17 @@
         }
         static void Main(string[] args)
         {
-            Pizza maPizza = new Pizza("quatre fromages", 11);
-            maPizza.Afficher();
+            List<Pizza> pizzas = new List<Pizza>();
+            pizzas.Add(new Pizza("quatre fromages", 11));
+            pizzas.Add(new Pizza("norvegienne", 16));
+            pizzas.Add(new Pizza("normande", 12));
+            pizzas.Add(new Pizza("montagnarde", 15));
+            pizzas.Add(new Pizza("végétarienne", 9));
+
+            foreach(Pizza p in pizzas)
+            {
+                p.Afficher();
+            }
         }
     }
 }
